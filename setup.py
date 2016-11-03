@@ -53,7 +53,6 @@ setup(
         'django-extensions>=1.5.5',
         'django-nose>=1.4',
         'dj.choices>=0.10.0',
-        'mysqlclient==1.3.7',
         'nose-cov>=1.6',
         'factory_boy>=2.5.2',
         # 3.3.3 includes bug, https://github.com/rtfd/readthedocs.org/issues/2101
@@ -65,5 +64,9 @@ setup(
         'rules>=0.4',
         'raven==5.20.0'
     ],
+    extras_requires={
+        'mysql': ['mysqlclient'],
+        'postgresql': ['psycopg2'],
+    },
     zip_safe = False,  # if only because of the readme file
 )
