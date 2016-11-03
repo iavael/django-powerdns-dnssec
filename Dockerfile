@@ -1,5 +1,6 @@
 FROM zefciu/dnsaas-base
 MAINTAINER Pylabs <pylabs@allegro.pl>
+RUN pip install mysqlclient==1.3.7
 RUN mkdir dnsaas
 ADD dnsaas dnsaas/dnsaas
 ADD powerdns dnsaas/powerdns
